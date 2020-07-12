@@ -237,6 +237,7 @@ body {
     min-width: 200px;
 }
 
+
 /* Section */
 
 .section {
@@ -550,11 +551,16 @@ body {
 }
 
 .footer-social {
-    padding-top: 72px;
-    padding-bottom: 100px;
-   
+   display: inline-block;
+    width: 206px;
     color: var(--primary-white-color);
 }
+
+.footer-social .logo-list {
+   margin: 0;
+   padding: 20px 0px 0px 0px;
+}
+
 
 .footer-social .link {
     fill: var(--primary-white-color);
@@ -566,23 +572,34 @@ body {
 .form {
     width: 570px;
     padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-
-    outline: 1px solid tomato;
    
 }
 
 .form .group {
     display: flex;
+    
+}
+
+.group-title {
+    color: var(--primary-white-color); 
+    margin-bottom: 20px; 
+}
+
+.group-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px; 
+
 }
 
 .form-field {
     width: 358px;
-    height: 50px;
+   
     display: flex;
     margin-right: 12px;
-    margin-top: 20px;
+    
 }
 
 .form-field input {
@@ -594,18 +611,12 @@ body {
     background-color: var(--footer-color);
 }
 
-.group-title {
-    color: var(--primary-white-color);  
-}
-
-.group-button {
-    display: flex;
-}
-
 .button-primary {
     display: flex;
+    align-items: center;
     justify-content: center;
-    min-width: 200px;
+    width: 200px;
+    height: 50px;
     border-radius: 4px;
     background-color: var(--accent-color);
     color: var(--primary-white-color);
@@ -613,11 +624,7 @@ body {
     border: none;
     
     font-size: 16px;
-
-
-    text-align: center;
-
-
+    padding: 0;
 }
 
 .button-primary .logo-primary {
@@ -628,48 +635,54 @@ body {
 
 }
 
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
 
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    width: 450px;
+    height: 609px;
+    background-color: var(--primary-white-color);
 
-.subscribe b {
-    display: block;
-    color: var(--primary-white-color);
-}
+  }
 
-.button .primary {
-    
-    padding: 29px 10px 28px 10px;
-    min-width: 200px;
+  .form-blank {
+    outline: 1px solid tomato;
+    width: 100%;
+    padding: 40px;
    
-    background-color: var(--footer-color);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--primary-text-color);
-    
-    transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  }
 
-.subscribe .logo-primary {
+  .blank-field {
+    outline: 1px solid tomato;   
+    margin-bottom: 20px;
+  }
+  
+
+  .blank-field .link:not(:last-child) {
+    margin-bottom: 28px; 
+  }
+    
+  .blank-field .link {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px; 
-    margin-left: 10px;
-    fill: var(--primary-text-color);
+  }
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-
-.subscribe .button:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-white-color);
-}
-
-.button:hover .logo-primary,
-.button:focus .logo-primary {
-    fill: var(--primary-white-color);
-}
+  .blank-field input {
+    width: 100%;
+    padding: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
 
 
 /* Стилі для Portfolio */
