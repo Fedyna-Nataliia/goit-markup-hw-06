@@ -290,7 +290,7 @@ body {
 
 .feature-list .title {
 
-    margin-top: 0;
+    margin-top: 30px;
     margin-bottom: 10px;
 
     color: var(--title-tex-color);
@@ -645,6 +645,7 @@ body {
   }
 
   .modal {
+   display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -657,15 +658,30 @@ body {
   }
 
   .form-blank {
+   
     outline: 1px solid tomato;
     width: 100%;
     padding: 40px;
    
   }
 
+  .form-blank .title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--title-tex-color);
+
+  }
+
   .blank-field {
-    outline: 1px solid tomato;   
+    outline: 1px solid tomato;  
+    margin-top: 12px; 
     margin-bottom: 20px;
+
   }
   
 
@@ -677,6 +693,14 @@ body {
     display: flex;
   }
 
+  textarea {
+    resize: none;
+    width: 100%;
+    padding: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  }
+
   .blank-field input {
     width: 100%;
     padding: 0;
@@ -684,6 +708,20 @@ body {
     border-radius: 4px;
   }
 
+  .blank-checkbox {
+    margin-bottom: 30px;
+  }
+
+  .blank-checkbox a {
+    color: var(--accent-color);
+  }
+
+.backdrop .button-primary {
+    
+    margin-right: auto;
+    margin-left: auto;
+    
+}
 
 /* Стилі для Portfolio */
 
