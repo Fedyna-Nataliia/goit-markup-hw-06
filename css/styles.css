@@ -644,8 +644,13 @@ body {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
+  .backdrop.is-hidden {
+    opacity: 1;
+    pointer-events: none;
+  }
+
   .modal {
-   display: flex;
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -716,11 +721,34 @@ body {
     color: var(--accent-color);
   }
 
-.backdrop .button-primary {
+  .backdrop .button-primary {
     
     margin-right: auto;
     margin-left: auto;
     
+}
+
+.button-close {
+
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-white-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.button-close .close {
+
+  width: 18px;
+  height: 18px; 
+
+
+}
+
+.button-close :hover {
+    fill: var(--accent-color)
 }
 
 /* Стилі для Portfolio */
@@ -738,6 +766,7 @@ body {
     margin-left: auto;
 
     width: 611px;
+   
 }
 
 .filter-list .link:not(:last-child) {
@@ -748,7 +777,8 @@ body {
     display: block;
 
     color: var(--title-text-color);
-    text-decoration: none;   
+    text-decoration: none; 
+   
 }
 
 .filter-list .link:hover,
@@ -757,7 +787,7 @@ body {
 }
 
 .filter-list .button-style {
-    
+    border: none;
     border-radius: 4px;
     padding: 6px 22px;
     min-width: 29px;
