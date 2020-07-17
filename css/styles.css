@@ -699,6 +699,27 @@ body {
     display: flex;
     align-items: center;
     
+    position: relative;
+  }
+
+  .form-input:focus + .form-label,
+  .form-input:not(:placeholder-shown) + .form-label {
+    color: tomato;
+    transform: translateY(-50px);
+  }
+
+  .form-label {
+    position: absolute;
+    margin-left: 42px;
+  }
+
+  .form-icone {
+    position: absolute;
+    margin-left: 16px;
+
+    width: 18px;
+    height: 18px;
+    fill: var(--title-tex-color);
   }
 
   textarea {
@@ -748,7 +769,9 @@ body {
 }
 
 .button-close {
-    
+    position: absolute;
+    top: 8px;
+    right: 8px;
 
     width: 30px;
     height: 30px;
@@ -756,10 +779,12 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 
-    
+    display: flex;
+  
 }
 
 .button-close .close {
+   
 
    width: 18px;
    height: 18px; 
