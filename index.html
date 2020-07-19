@@ -395,8 +395,8 @@
                 <b class="title">Оставьте свои данные, мы вам перезвоним</b>
                 <ul class="blank-field">
                     <li class="link">
-                    <input type="text" name="name"  id="name" placeholder=" " />
-                    <label for="name">Имя</label>
+                    <input type="text" class="form-input" name="name"  id="name" placeholder=" " />
+                    <label for="name"class="form-label">Имя</label>
                     <svg class="form-icone">
                         <use href="./images/sprite.svg#icon-Vector"></use>
                     </svg>
@@ -409,8 +409,8 @@
                     </svg>
                     </li>
                     <li class="link">
-                    <input type="email" name="mail" id="mail" placeholder=" " />
-                    <label for="mail">Почта</label>
+                    <input type="email" class="form-input" name="mail" id="mail" placeholder=" " />
+                    <label for="mail"class="form-label">Почта</label>
                     <svg class="form-icone">
                         <use href="./images/sprite.svg#icon-Vector2"></use>
                     </svg>
@@ -423,8 +423,13 @@
                 </ul>
             
                   <div class="blank-checkbox">
-                    <input type="checkbox" name="policy" id="policy" />
-                    <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="./index.html">Условия договора</a></label>
+                    <label class="checkbox-field">
+                        <input class="checkbox" type="checkbox" name="policy" />
+                        <span class="checkbox-icon"></span>
+                        <span class="label">
+                            Соглашаюсь с рассылкой и принимаю <a href="./index.html"> Условия договора</a>
+                        </span>
+                    </label>
                   </div>
             
                   <button type="submit" class="button-primary">Отправить</button>
