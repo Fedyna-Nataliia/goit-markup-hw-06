@@ -52,7 +52,7 @@
         <section class="section-hero">
             <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <a href="" class="button-hero button" data-open-modal>Заказать услугу</a>
+          <a href="" class="button-hero button" data-modal-open>Заказать услугу</a>
         </section>
 
           <!-- Преимущества -->
@@ -389,7 +389,7 @@
         </section>
        </footer>
 
-       <div class="backdrop is-hidden" data-backdrop>
+       <div class="backdrop is-hidden" data-modal>
            <div class="modal">
             <form class="form-blank js-speaker-form">
                 <b class="title">Оставьте свои данные, мы вам перезвоним</b>
@@ -433,8 +433,8 @@
                   </div>
             
                   <button type="submit" class="button-primary">Отправить</button>
-                  <button type="button" class="button-close" data-close-modal>
-                    <svg class="close">
+                  <button type="button" class="button-close" data-modal-close>
+                      <svg class="close">
                         <use href="./images/sprite.svg#icon-close-black-18dp"></use>
                     </svg>
                   </button>
@@ -442,42 +442,6 @@
            </div>
        </div>
 
-
-       <script>
-        (() => {
-          document
-            .querySelector('.js-speaker-form')
-            .addEventListener('submit', e => {
-              e.preventDefault();
-  
-              new FormData(e.currentTarget).forEach((value, name) =>
-                console.log(`${name}: ${value}`),
-              );
-  
-              e.currentTarget.reset();
-            });
-        })();
-      </script>
-
-   <script>
-    const refs = {
-      openModalBtn: document.querySelector("[data-open-modal]"),
-      closeModalBtn: document.querySelector("[data-close-modal]"),
-      backdrop: document.querySelector("[data-backdrop]"),
-    };
-
-    refs.openModalBtn.addEventListener("click", toggleModal);
-    refs.closeModalBtn.addEventListener("click", toggleModal);
-
-    refs.backdrop.addEventListener("click", logBackdropClick);
-
-    function toggleModal() {
-      refs.backdrop.classList.toggle("is-hidden");
-    }
-
-    function logBackdropClick() {
-      console.log("Это клик в бекдроп");
-    }
-   </script>
+<script src="./js/modal.js"></script>
 </body>
 </html>
